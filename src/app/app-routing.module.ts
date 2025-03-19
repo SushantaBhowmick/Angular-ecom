@@ -9,7 +9,7 @@ import { CheckoutComponent } from './Module/features/components/checkout/checkou
 import { PaymentComponent } from './Module/features/components/payment/payment.component';
 import { SuccessComponent } from './Module/features/components/success/success.component';
 import { OrderComponent } from './Module/features/components/order/order.component';
-import { OrderDetailsComponent } from './Module/features/components/order-details/order-details.component';
+import { OrderDetailsComponent } from './Module/features/components/order/order-details/order-details.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },

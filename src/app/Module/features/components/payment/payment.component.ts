@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class PaymentComponent {
 
+  products:any=[1,2,3];
+  cart:any=[1,2,3];
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  
+
 }

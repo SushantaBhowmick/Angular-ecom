@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -10,7 +11,7 @@ export class NavbarComponent {
   selectedSection: any;
   category:any;
   
-  constructor() {}
+  constructor(private router:Router) {}
 
   ngOnInit(): void {}
 
@@ -18,7 +19,9 @@ export class NavbarComponent {
     this.isNavbarConteneOpen = true;
     this.selectedSection = section; 
   }
-  navigateTo(path: any) {}
+  navigateTo(path: any) {
+    this.router.navigate([path]);
+  }
   openProfileMenu(menu?: any) {}
 
   closeNavbar() {

@@ -10,11 +10,13 @@ import { ProductsComponent } from './components/products/products.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from "../shared/shared.module";
 import { CartComponent } from './components/cart/cart.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
@@ -22,8 +24,10 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { SuccessComponent } from './components/success/success.component';
 import { OrderComponent } from './components/order/order.component';
-import { OrderDetailsComponent } from './components/order-details/order-details.component';
+import { OrderDetailsComponent } from './components/order/order-details/order-details.component';
 import { ProductReviewCardComponent } from './components/product-details/product-review-card/product-review-card.component';
+import { AddressFormComponent } from './components/checkout/address-form/address-form.component';
+import { OrderCardComponent } from './components/order/order-card/order-card.component';
 
 const routers: Routes = [
   {path: '', component: ProductsComponent},
@@ -47,6 +51,8 @@ const routers: Routes = [
     OrderComponent,
     OrderDetailsComponent,
     ProductReviewCardComponent,
+    AddressFormComponent,
+    OrderCardComponent,
   ],
   imports: [
     RouterModule.forChild(routers),
@@ -61,6 +67,9 @@ const routers: Routes = [
     FormsModule,
     SharedModule,
     MatProgressBarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule
 ],
   exports: [
     FeatureComponent,
